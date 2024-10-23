@@ -1,0 +1,19 @@
+int main() {
+    // Define the grid size
+    int gridWidth = 10;
+    int gridHeight = 10;
+
+    // Generate random positions
+    std::tuple<int, int> pos1 = Utils::generateRandomPos(gridWidth, gridHeight);
+    std::tuple<int, int> pos2 = Utils::generateRandomPos(gridWidth, gridHeight);
+
+    // Print the generated positions
+    std::cout << "Position 1: (" << std::get<0>(pos1) << ", " << std::get<1>(pos1) << ")" << std::endl;
+    std::cout << "Position 2: (" << std::get<0>(pos2) << ", " << std::get<1>(pos2) << ")" << std::endl;
+
+    // Calculate the distance between the two points
+    double distance = Utils::calculateDistance(pos1, pos2);
+    std::cout << "Distance between Position 1 and Position 2: " << distance << std::endl;
+
+    return 0;
+}
